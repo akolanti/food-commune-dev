@@ -132,7 +132,6 @@ height:100%;
 display:flex;
 justify-content:space-between;
 width:90%;
-
 `;
 export const CartTotal =styled.div`
 

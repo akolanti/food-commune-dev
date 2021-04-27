@@ -73,11 +73,10 @@ export function LoginForm(props) {
       <SubmitButton onClick={onSubmit} type="submit">Signin</SubmitButton>
       <Marginer direction="vertical" margin="1em" />
       <MutedLink href="#">
-        Don't have an accoun?{" "}
-        <BoldLink href="#" onClick={switchToSignup}>
+        Don't have an account?{" "}
+      </MutedLink><BoldLink  onClick={switchToSignup}>
           Signup
         </BoldLink>
-      </MutedLink>
     </BoxContainer>
   );
 }

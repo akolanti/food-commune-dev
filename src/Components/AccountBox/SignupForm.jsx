@@ -74,10 +74,10 @@ export function SignupForm(props) {
       <Marginer direction="vertical" margin="1em" />
       <MutedLink href="#">
         Already have an account?
-        <BoldLink href="#" onClick={switchToSignin}>
+      </MutedLink>
+      <BoldLink  onClick={switchToSignin}>
           Signin
         </BoldLink>
-      </MutedLink>
     </BoxContainer>
   );
 }

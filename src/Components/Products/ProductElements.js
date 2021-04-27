@@ -2,7 +2,6 @@ import styled from "styled-components";
 import {Link, Link as LinkR} from 'react-router-dom'
 
 export const ProductsContainer=styled.div`
-width:100vw;
 min-height:100vh;
 padding: 5rem calc((100vw-1300px)/2);
 background:#fff;
@@ -23,9 +22,7 @@ margin:0 auto;
 `
 
 export const ProductCard= styled.div`
-margin:0 2rem;
-line-height:2;
-width:300px;
+margin: 2rem;
 border-radius: 2rem;
 
 `
@@ -74,8 +71,8 @@ export const ProductButton= styled.button`
 font-size:1rem;
 padding: 1rem 4rem;
 border:none;
-background:green;
-color: wheat;
+background:#FFCC00;
+color: #101;
 transition: 0.2s ease-in-out;
 border-radius:8px;
 
@@ -89,7 +86,7 @@ text-decoration:none;
 padding: 0 1rem;
 height: 100% auto;
 cursor: pointer;
-color: white;
+color: #101;
 
 
 &:active {

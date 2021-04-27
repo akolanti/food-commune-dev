@@ -6,7 +6,9 @@ import swal from 'sweetalert';
 
 import axios from 'axios'
 
+
 const Products = ({heading,res,id}) => {
+
     const [result,setresult]=useState([]);
     useEffect(()=>{
         axios.get(`http://localhost:3000/api/get_restaurant/${id}`)
@@ -18,10 +20,8 @@ const Products = ({heading,res,id}) => {
 
      const addtocart=(product)=>
      {
-        setcart(JSON.parse(localStorage.getItem('cart')));
 
-       console.log( JSON.parse(localStorage.getItem('cart')));
-         if(localStorage.getItem('cart')==null|| JSON.parse(localStorage.getItem('cart'))=='' )
+         if(JSON.parse(localStorage.getItem('cart'))==null|| JSON.parse(localStorage.getItem('cart'))=='' )
          {
             cart.push(product);
             localStorage.setItem("cart", JSON.stringify(cart));
@@ -29,24 +29,28 @@ const Products = ({heading,res,id}) => {
          }
          else
          {
+
             var ind=JSON.parse(localStorage.getItem('cart')).findIndex((item)=>(item._id==product._id));
             
             if(ind>-1)
             {
                 swal({
-                    title: "Already in cart",
+                    title: "Alredy in cart",
                     icon: "warning",
                  
                   });
             }
             else{
+                
+                // console.log(JSON.parse(localStorage.getItem('cart')));
+                setcart(JSON.parse(localStorage.getItem('cart')));
                 cart.push(product);
                 localStorage.setItem("cart", JSON.stringify(cart));
                 swal("Added to cart!", "check cart!", "success")
             }
    
          }
-         console.log( JSON.parse(localStorage.getItem('cart')));
+        //  console.log( JSON.parse(localStorage.getItem('cart')));
 
      }
        return (
@@ -55,12 +59,10 @@ const Products = ({heading,res,id}) => {
            <ProductWrapper>
                {result.map((product) => {
                    return(
-                       <ProductCard key={product._id}>
-                             <ProductImg src={product3} alt={product.price} />
+                       <ProductCard className="card col-md-3" key={product._id}>
                        <ProductInfo>
-                       <ProductTitle>{product.item_name}</ProductTitle>
-                       {/* <ProductDesc>{product.description}</ProductDesc> */}
-                       <ProductPrice>{product.price}</ProductPrice>
+                       <ProductTitle className="card-title">{product.item_name}</ProductTitle>
+                       <ProductPrice className="card-text">{product.price}</ProductPrice>
                        <ProductButton onClick={()=>addtocart(product)}>{'Add to cart'}</ProductButton>
                        </ProductInfo>
                        </ProductCard>

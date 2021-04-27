@@ -114,11 +114,11 @@ const Cart = () => {
         document.getElementById('tax').innerHTML=wotax;
         document.getElementById('total').innerHTML=ntotal;
         document.getElementById('price').innerHTML=(sum).toFixed(2);
-            console.log(ntotal)
+            console.log(ntotal);
         localStorage.setItem('price',ntotal);
 
         console.log(localStorage.getItem('price')*100);
-    
+            
     }
     useEffect(()=>{
      cost();
@@ -132,7 +132,7 @@ const Cart = () => {
                { menu ?  menu.map((item)=>(  <CartProduct id={'pro_'+item._id} key={item._id}>
                <ItemPrice>{item.item_name}</ItemPrice>  
                 <ItemPrice>{'$'+item.price}</ItemPrice>
-                <QuantityInput type="text" id={'qty_'+item._id} value={item.quantity}></QuantityInput>
+                <QuantityInput type="text" id={'qty_'+item._id} value={item.quantity} readOnly></QuantityInput>
                 <QuantityButtonMinus  onClick={()=>decrease_item(item._id)}>-</QuantityButtonMinus>
                 <QuantityButtonPlus onClick={()=>increase_item(item._id)}>+</QuantityButtonPlus>
                 <button type="button" onClick={()=>remove_item(item._id)} className="btn btn-danger">Remove</button>
