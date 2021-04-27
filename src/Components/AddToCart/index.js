@@ -16,24 +16,24 @@ const Cart = () => {
     toast.configure();
     const [menu,setmenu]=useState((JSON.parse(localStorage.getItem('cart'))));
    //to show receipt if the payment successful 
-    const [receipt] =useState({
-        flag:false,
-        url:null
-    })
+    // const [receipt] =useState({
+    //     flag:false,
+    //     url:null
+    // })
     
-    const addLink = () =>{
+    // const addLink = () =>{
 
-        if(receipt.url!=null|receipt.flag==true){
-               let url = new URL;
-               url=receipt.url;
-            return(
-                <>
-                <recieptLink to="url"> View </recieptLink>
-                </>
-            )
-      }
+    //     if(receipt.url!=null|receipt.flag==true){
+    //            let url = new URL;
+    //            url=receipt.url;
+    //         return(
+    //             <>
+    //             <recieptLink to="url"> View </recieptLink>
+    //             </>
+    //         )
+    //   }
 
-    }
+    // }
 
     
     //stripe product names
@@ -50,10 +50,10 @@ const Cart = () => {
                 console.log(response)
               const {status} =response.data;
               if(status==="success"){
-                  console.log(response.data.receipt_url);
+                 // console.log(response.data.receipt_url);
                     toast('success! check your email for details',{type:'success'})
-                    receipt.flag=true;
-                    receipt.url=response.data.receipt_url;
+                    // receipt.flag=true;
+                    // receipt.url=response.data.receipt_url;
                     // window.open(response.data.receipt_url, "_blank");
 
               }else {
@@ -114,8 +114,10 @@ const Cart = () => {
         document.getElementById('tax').innerHTML=wotax;
         document.getElementById('total').innerHTML=ntotal;
         document.getElementById('price').innerHTML=(sum).toFixed(2);
+            console.log(ntotal)
         localStorage.setItem('price',ntotal);
-        //console.log(localStorage.getItem('price')*100);
+
+        console.log(localStorage.getItem('price')*100);
     
     }
     useEffect(()=>{
