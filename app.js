@@ -3,7 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-require('./api_server/models/db');
+require('./Api_server/models/db');
 var Stream =require('stream-chat')
 
 const indexRouter = require('./App_server/routes/index');
