@@ -23,7 +23,7 @@ export const RestuarantDescription = () => {
 
     const [restot,setRest]=useState([]);
     useEffect(()=>{
-       axios.get(`http://localhost:3000/api/get_single_res/${id}`)
+       axios.get(`https://food-commune-dev.herokuapp.com/api/get_single_res/${id}`)
        .then(response => {
            setRest(response.data);
            console.log(response.data);
