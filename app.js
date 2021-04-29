@@ -9,7 +9,8 @@ var Stream =require('stream-chat')
 const indexRouter = require('./App_server/routes/index');
 var usersRouter = require('./App_server/routes/users');
 var apiRoutes = require('./Api_server/routes/index');
-var routes = require('./app_server/routes/index');const cors = require("cors");
+var routes = require('./App_server/routes/index');
+const cors = require("cors");
 const stripe = require("stripe")("sk_test_51IgvT7FowvHTDhySVC2loicz9pLaE5ZJYqZW5pKb5wCVX433eLKQOsfZKDin9ZHgMVQ1NUWx2rGH5k116co65Prt00q9ziYd5k");
 const uuid = require("uuid");
 const {
@@ -113,14 +114,6 @@ app.use(function (err, req, res, next) {
   res.render('error');
 });
 
-//chat api 
-
-// app.get('/api/chat', function() {
-//   const chat_token = client.createToken('user');
-//   console.log(chat_token);
-
-//   res.send("hello")
-// });
 
 
 module.exports = app;
