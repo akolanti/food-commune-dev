@@ -41,11 +41,6 @@ app.use('/api', apiRoutes);
 // app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
-//chat stream
-// const StreamChat = require('stream-chat').StreamChat; 
-//   const chatClient = StreamChat.getInstance('ms753b275zwm');
-//   const client = new StreamChat('ms753b275zwm', 'z4c5cts7jtsjnh25bxxn7tmefarcfxys6wwuu3am943mb6fqzm46vsyyj6edavfr'); 
-  
 
 
 // stripe checkout
