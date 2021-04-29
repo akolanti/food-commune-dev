@@ -4,7 +4,7 @@ import axios from "axios"
 const RestuarentList = () => {
     const [restot,setRest]=useState([]);
      useEffect(()=>{
-        axios.get(`https://food-commune-dev.herokuapp.com/api/`)
+        axios.get(`https://food-commune-dev.herokuapp.com/api/restaurant_list`)
         .then(response => {
             setRest(response.data.data);
             console.log(response.data.data);
