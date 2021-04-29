@@ -35,7 +35,7 @@ const Products = ({heading,res,id}) => {
             if(ind>-1)
             {
                 swal({
-                    title: "Alredy in cart",
+                    title: "Already in cart",
                     icon: "warning",
                  
                   });

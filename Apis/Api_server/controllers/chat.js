@@ -5,8 +5,10 @@ const StreamChat = require('stream-chat').StreamChat;
 const chat_token =(req,res)=>{
 
     // const userid= 'user'+Math.random()*10 ;
-    const stringSet= JSON.stringify(req.body); 
-    const chat_token = client.createToken(stringSet);
+    const stringSet= JSON.stringify(req.body.userName); 
+    const chat_token = client.createToken("user");
+    console.log(stringSet)
+    console.log(chat_token)
     res.send(chat_token)
 }
 

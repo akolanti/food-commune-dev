@@ -11,7 +11,7 @@ router.post('/register', ctrlMain.register);
 router.get('/restaurant_list', ctrlMain.get_restaurant_list);
 router.get('/get_restaurant/:res_id', ctrlMain.get_restaurant);
 router.get('/get_single_res/:res_id', ctrlMain.get_single_res);
-router.get('/chat',ctrlChat.chat_token);
+router.post('/chat',ctrlChat.chat_token);
 
 // // function verifyToken(req,res,next)
 // // {

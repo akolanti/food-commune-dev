@@ -8,7 +8,8 @@ import ReactToPrint from 'react-to-print'
     <div className="body" 
      style={{"text-align": "center",
              "padding": "40px 0",
-             "background": "#EBF0F5"
+             "background": "#EBF0F5",
+             "marginTop" :"3rem"
             }}>
     <div class="card" 
       style={{"background": "white",

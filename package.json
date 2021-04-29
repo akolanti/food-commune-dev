@@ -27,6 +27,7 @@
     "react-toastify": "^7.0.4",
     "start": "^5.1.0",
     "stream-chat": "^3.7.0",
+    "stream-chat-react": "^5.2.1",
     "stripe": "^8.144.0",
     "styled-components": "^5.2.1",
     "sweetalert": "^2.1.2",
