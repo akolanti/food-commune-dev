@@ -41,7 +41,7 @@ export function LoginForm(props) {
          if(res.data.token!=null)
          {
           localStorage.setItem('token',res.data.token);
-
+          localStorage.setItem('userName',email)
           history.push('/');
           
          }
