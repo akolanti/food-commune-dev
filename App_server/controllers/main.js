@@ -1,5 +1,5 @@
 const login=function(req,res){
-    res.render('../views/index.pug');
+    res.render('index');
 };
 
 module.exports=
