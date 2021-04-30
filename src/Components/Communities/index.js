@@ -2,7 +2,7 @@ import {React,useEffect,useState} from 'react';
 import { StreamChat } from 'stream-chat';
 import { Chat, Channel, ChannelHeader, MessageInput, MessageList, Thread, Window } from 'stream-chat-react';
 import 'stream-chat-react/dist/css/index.css';
-import {ChatContainer} from '../Communities/CommuntiesElements'
+import {ChatContainer, ChatContainerHeading} from '../Communities/CommuntiesElements'
 import axios from 'axios'; 
 
 
@@ -51,6 +51,7 @@ const ChatComponent = (
     
     return(
     <ChatContainer>
+      <ChatContainerHeading>Meet the people around you, food-commune</ChatContainerHeading>
     <Chat client={chatClient} theme='messaging dark'>
       <Channel channel={channel}>
         <Window>
