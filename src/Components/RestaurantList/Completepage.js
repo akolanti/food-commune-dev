@@ -20,7 +20,7 @@ const Completepage = () => {
     <div>
          <header className="App-header">
       <Form inline style={{'margin': 0,
-    'margin-top': '150px'}}>
+    'margin-top': '80px'}}>
       <img src={locationimage} style={{'max-width': '60vh',
     'max-height': '150px'}} alt="image" className="locationimg"/>
       {/* <FormControl type="text" placeholder="Search location" className="mr-sm-6" /> */}
@@ -45,11 +45,12 @@ const Completepage = () => {
 </Jumbotron>
 <h1 style={{"text-align":"center",'padding':'40px'}}>Treat Yourself</h1>
 <br></br>
+<div style={{"backgroundColor":"white","color":"black"}}>
 <RestuarentList/>
         {/* <Selection /> */}
     
       
-    </div>
+    </div></div>
   )
 }
 

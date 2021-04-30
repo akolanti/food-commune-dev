@@ -8,7 +8,7 @@ const Restuarents = (props) => {
     <div className="restaurents text-center">
     <div className="overflow">
         <img src={`data:image/png;base64,${props.Resto.res_img}`}  style={{'max-width': '50vh',
-    'max-height': '150px'}} alt="image" className="card-img-top"/>
+    'max-height': '100px'}} alt="image" className="card-img-top"/>
     </div>
     <div className="card-body text-dark">
         <h4 classname="card-title">{props.Resto.res_name} </h4>
