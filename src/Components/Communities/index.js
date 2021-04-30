@@ -2,7 +2,7 @@ import {React,useEffect,useState} from 'react';
 import { StreamChat } from 'stream-chat';
 import { Chat, Channel, ChannelHeader, MessageInput, MessageList, Thread, Window } from 'stream-chat-react';
 import 'stream-chat-react/dist/css/index.css';
-
+import {ChatContainer} from '../Communities/CommuntiesElements'
 import axios from 'axios'; 
 
 
@@ -36,7 +36,7 @@ const ChatComponent = (
        const channelSet= await client.channel('messaging', 'user', {
             // add as many custom fields as you'd like
     
-            name: 'Talk about food-commune',
+            name: 'Local Description',
             members: ["user"],
           });
           
@@ -50,7 +50,7 @@ const ChatComponent = (
     
     
     return(
-
+    <ChatContainer>
     <Chat client={chatClient} theme='messaging dark'>
       <Channel channel={channel}>
         <Window>
@@ -61,6 +61,7 @@ const ChatComponent = (
         <Thread />
       </Channel>
     </Chat>
+    </ChatContainer>
   );
 }
 
