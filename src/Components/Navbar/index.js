@@ -52,7 +52,7 @@ const NavBarSignIn= ({toggle})=>{
                     </MobileIcon  > 
                     <NavMenu>
                         <NavItem>
-                            <NavLinks to="/about"> About</NavLinks>
+                            <NavLinks to="/"> About</NavLinks>
                         </NavItem>
                         <NavItem>
                             <NavLinks to="/list">Restaurants </NavLinks>
@@ -100,7 +100,7 @@ const NavBarSignOut= ({toggle})=>{
                     </MobileIcon  > 
                     <NavMenu>
                         <NavItem>
-                            <NavLinks to="about"> About</NavLinks>
+                            <NavLinks to="/"> About</NavLinks>
                         </NavItem>
                         <NavItem>
                             <NavLinks to="list">Restaurants </NavLinks>

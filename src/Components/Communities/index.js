@@ -51,7 +51,7 @@ const ChatComponent = (
     
     return(
 
-    <Chat client={chatClient} theme='messaging light'>
+    <Chat client={chatClient} theme='messaging dark'>
       <Channel channel={channel}>
         <Window>
           <ChannelHeader />
