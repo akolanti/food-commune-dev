@@ -6,14 +6,16 @@ import StripeCheckout from 'react-stripe-checkout';
 import axios from'axios';
 import {toast, ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { render } from 'react-dom';
+import { Redirect } from 'react-router-dom';
+import { Link,useHistory } from 'react-router-dom';
 // import { response } from '../../../Apis/app';
-
+const history= useHistory();
 
 
 const Cart = () => {
 
     toast.configure();
+    const history= useHistory();
     const [menu,setmenu]=useState((JSON.parse(localStorage.getItem('cart'))));
    //to show receipt if the payment successful 
     // const [receipt] =useState({
@@ -44,11 +46,13 @@ const Cart = () => {
         //stripe handling
        async function handleToken (token){
         console.log(token);
+        history.push('./success');
        await axios.post(`https://food-commune-dev.herokuapp.com/api/`,{token, product})
        .then(
             response => {
                 console.log(response)
               const {status} =response.data;
+           
               if(status==="success"){
                  // console.log(response.data.receipt_url);
                     toast('success! check your email for details',{type:'success'})
