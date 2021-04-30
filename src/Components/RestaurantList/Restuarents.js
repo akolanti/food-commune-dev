@@ -15,7 +15,7 @@ const Restuarents = (props) => {
         <p className="card-text text-secondary">
         {props.Resto.res_name} Delivery Fee . 15-20 min
         </p>
-        <a href={`restaurant/${props.Resto._id}`} className="btn btn-outline-success">Order now</a>
+        <a href={`/restaurant/${props.Resto._id}`} className="btn btn-outline-success">Order now</a>
     </div>
 </div>
 </div>
