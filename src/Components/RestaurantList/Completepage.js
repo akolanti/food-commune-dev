@@ -43,9 +43,9 @@ const Completepage = () => {
             <Button variant="primary">Invite Friends</Button>
         </p>
 </Jumbotron>
-<h1 style={{"text-align":"center",'padding':'40px'}}>Treat Yourself</h1>
+<h1 style={{"text-align":"center",'padding':'40px',"backgroundColor":"white","color":"black"}}>Treat Yourself</h1>
 <br></br>
-<div style={{"backgroundColor":"white","color":"black"}}>
+<div style={{"backgroundColor":"white","color":"black","marginTop":"2rem"}}>
 <RestuarentList/>
         {/* <Selection /> */}
     
