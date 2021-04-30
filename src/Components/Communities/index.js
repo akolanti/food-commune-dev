@@ -19,16 +19,12 @@ const ChatComponent = (
         const initChat = async () => {
         const client = StreamChat.getInstance('ms753b275zwm');
         // const userName= localStorage.getItem('userName').toString;
-        const userName1= "user"
-        await  axios.post('https://food-commune-dev.herokuapp.com/api/',{userName:"user"}).then(
+        await  axios.post(`https://food-commune-dev.herokuapp.com/api/chat`,{UserName:'user'}).then(
         response=>{
             token =response.data
-            console.log(token)
-        }
-        
-        );
-        console.log(token)
-
+            console.log(token);
+        });
+        console.log(token);
         await client.connectUser(
           {
             id:"user",

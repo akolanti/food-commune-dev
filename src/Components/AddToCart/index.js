@@ -44,7 +44,7 @@ const Cart = () => {
         //stripe handling
        async function handleToken (token){
         console.log(token);
-       await axios.post('https://food-commune-dev.herokuapp.com/api/',{token, product})
+       await axios.post(`https://food-commune-dev.herokuapp.com/api/`,{token, product})
        .then(
             response => {
                 console.log(response)
