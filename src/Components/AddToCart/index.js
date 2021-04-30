@@ -9,7 +9,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Redirect } from 'react-router-dom';
 import { Link,useHistory } from 'react-router-dom';
 // import { response } from '../../../Apis/app';
-const history= useHistory();
 
 
 const Cart = () => {
