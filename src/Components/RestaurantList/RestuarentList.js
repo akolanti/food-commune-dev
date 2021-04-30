@@ -12,7 +12,7 @@ const RestuarentList = () => {
      },[]);
   return (
     <div className="container-fluid d-flex justify-content-center">
-    <div className="row">
+    <div className="row" style={{"marginTop":"100px"}}>
         {restot && restot.map((rest)=>(
              <Restuarents key={rest._id} Resto={rest}/>
         ))}
