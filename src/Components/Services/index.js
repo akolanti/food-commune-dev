@@ -1,7 +1,7 @@
 import React from 'react'
 import Icon1 from '../../Images/takeout2.jpg';
 import Icon2 from '../../Images/tacos.jpg';
-import Icon3 from '../../Images/mexican.jpg';
+import Icon3 from '../../Images/mexicanR.jpg';
 
 import { ServicesContainer,
 ServicesH1,ServicesCard,ServicesWrapper,ServicesIcon,ServicesH2,ServicesP} from './ServicesElements'
